@@ -7,7 +7,7 @@ public class TShirt extends Clothes {
     public TShirt() {
     }
 
-    public TShirt(int price, String color, String description, int quantity, String size) {
+    public TShirt(double price, String color, String description, int quantity, String size) {
         super(price, color, description, quantity);
         this.size = size;
     }
@@ -21,8 +21,8 @@ public class TShirt extends Clothes {
     }
 
     @Override
-    public void printInfo() {
-        System.out.println("About trouser: " + getPrice() + "  " + getColor() + "  " + getDescription() +
+    public void printInfo(int index) {
+        System.out.println(index + ". " + getPrice() + "  " + getColor() + "  " + getDescription() +
                 "  " + getQuantity() + " " + size);
     }
 }

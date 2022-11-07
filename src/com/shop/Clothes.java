@@ -1,7 +1,7 @@
 package com.shop;
 
 public abstract class Clothes {
-    private int price;
+    private double price;
     private String color;
     private String description;
     private int quantity;
@@ -9,7 +9,7 @@ public abstract class Clothes {
     public Clothes() {
     }
 
-    public Clothes(int price, String color, String description, int quantity) {
+    public Clothes(double price, String color, String description, int quantity) {
         this.price = price;
         this.color = color;
         this.description = description;
@@ -17,11 +17,11 @@ public abstract class Clothes {
 
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -49,5 +49,5 @@ public abstract class Clothes {
         this.quantity = quantity;
     }
 
-    public abstract void printInfo();
+    public abstract void printInfo(int index);
 }

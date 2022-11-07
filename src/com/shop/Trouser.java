@@ -7,7 +7,7 @@ public class Trouser extends Clothes {
     public Trouser() {
     }
 
-    public Trouser(int price, String color, String description, int quantity, int length, int width) {
+    public Trouser(double price, String color, String description, int quantity, int length, int width) {
         super(price, color, description, quantity);
         this.length = length;
         this.width = width;
@@ -30,8 +30,8 @@ public class Trouser extends Clothes {
     }
 
     @Override
-    public void printInfo() {
-        System.out.println("About trouser: " + getPrice() + "  " + getColor() + "  " + getDescription() +
+    public void printInfo(int index) {
+        System.out.println(index + ". " + getPrice() + "  " + getColor() + "  " + getDescription() +
                 "  " + getQuantity() + " " + length + " " + width);
     }
 }

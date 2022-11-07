@@ -6,17 +6,18 @@ public class Shop implements IShop {
 
     private String name;
     private String location;
-    private Clothes[] clothesArray;
+    private final Clothes[] clothesArray;
 
     private int clothesAmount;
 
     public Shop() {
+        this.clothesArray = new Clothes[CLOTHES_MAX_NUMBER];
     }
 
     public Shop(String name, String location) {
+        this();
         this.name = name;
         this.location = location;
-        this.clothesArray = new Clothes[CLOTHES_MAX_NUMBER];
     }
 
     public String getName() {
@@ -52,14 +53,14 @@ public class Shop implements IShop {
         System.out.println("T-Shirts:");
         for (int i = 0; i < clothesAmount; i++) {
             if (clothesArray[i] instanceof TShirt) {
-                clothesArray[i].printInfo();
+                clothesArray[i].printInfo(i);
             }
         }
 
         System.out.println("Trousers:");
         for (int i = 0; i < clothesAmount; i++) {
             if (clothesArray[i] instanceof Trouser) {
-                clothesArray[i].printInfo();
+                clothesArray[i].printInfo(i);
             }
         }
     }
